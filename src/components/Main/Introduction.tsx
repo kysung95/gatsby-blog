@@ -12,8 +12,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 768px;
+  align-items: center;
+  width: 100%;
   height: 400px;
   margin: 0 auto;
 `;
