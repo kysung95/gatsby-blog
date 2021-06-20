@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 const IndexPage: FunctionComponent = function () {
   return (
     <div>
-      <Link to="/info/">To Info</Link>
+       <Link to="/info/">To Info</Link>
     </div>
   );
 };
