@@ -8,8 +8,7 @@ const POST_ITEM_DATA = {
   categories: ['Web', 'Frontend', 'Testing'],
   summary:
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
-  thumbnail:
-    'https://t1.daumcdn.net/cfile/tistory/991EDA445EA7C3090A',
+  thumbnail: 'https://t1.daumcdn.net/cfile/tistory/991EDA445EA7C3090A',
   link: 'https://www.google.co.kr/',
 };
 

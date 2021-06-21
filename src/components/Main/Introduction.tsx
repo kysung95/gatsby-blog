@@ -43,7 +43,6 @@ const Title = styled.div`
   }
 `;
 
-
 const Introduction: FunctionComponent = function () {
   return (
     <Background>
