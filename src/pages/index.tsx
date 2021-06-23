@@ -2,7 +2,7 @@ import React, { FunctionComponent, useMemo } from 'react';
 import styled from '@emotion/styled';
 import GlobalStyle from 'components/Common/GlobalStyle';
 import Footer from 'components/Common/Footer';
-import CategoryList from 'components/Main/CategoryList';
+import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
 import Introduction from 'components/Main/Introduction';
 import PostList, { PostType } from 'components/Main/PostList';
 import { ProfileImageProps } from 'components/Main/ProfileImage';
@@ -79,7 +79,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
         selectedCategory={selectedCategory}
         categoryList={categoryList}
       />
-      <PostList posts={edges} />
+      <PostList selectedCategory={selectedCategory} posts={edges} />
       <Footer />
     </Container>
   );
@@ -87,14 +87,17 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
 
 export default IndexPage;
 
-export const queryPostList = graphql`
-  query queryPostList {
+export const getPostList = graphql`
+  query getPostList {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date, frontmatter___title] }
     ) {
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             summary

@@ -14,7 +14,7 @@ type CategoryItemProps = {
 };
 
 type GatsbyLinkProps = {
-  children: ReactNode;
+  children: any;
   className?: string;
   to: string;
 } & CategoryItemProps;
