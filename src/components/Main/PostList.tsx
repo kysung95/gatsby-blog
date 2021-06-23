@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import PostItem from 'components/Main/PostItem';
 import { FluidObject } from 'gatsby-image';
@@ -57,13 +57,17 @@ const PostList: FunctionComponent<PostListProps> = function ({
 
   return (
     <PostListWrapper ref={containerRef}>
-      {postList.map(({ node: { id, frontmatter } }: PostType) => (
-        <PostItem
-          {...frontmatter}
-          link="<https://www.google.co.kr/>"
-          key={id}
-        />
-      ))}
+      {postList.map(
+        ({
+          node: {
+            id,
+            fields: { slug },
+            frontmatter,
+          },
+        }: PostType) => (
+          <PostItem {...frontmatter} link={slug} key={id} />
+        ),
+      )}
     </PostListWrapper>
   );
 };
