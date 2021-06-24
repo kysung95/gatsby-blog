@@ -6,7 +6,6 @@ import PostList, { PostType } from 'components/Main/PostList';
 import { ProfileImageProps } from 'components/Main/ProfileImage';
 import { graphql } from 'gatsby';
 import queryString, { ParsedQuery } from 'query-string';
-import { GatsbyImage } from 'gatsby-plugin-image';
 
 interface IndexPageProps {
   location: {
