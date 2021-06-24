@@ -1,7 +1,7 @@
 ---
 date: '2021-06-21'
 title: 'Test12'
-categories: ['Web', 'SEO', 'Optimization']
+categories: ['Web', 'SEO']
 summary: '용성이는 바보다'
 thumbnail: './test.png'
 ---

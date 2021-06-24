@@ -1,4 +1,5 @@
 import React, { createRef, FunctionComponent, useEffect } from 'react';
+import styled from '@emotion/styled';
 
 const src = 'https://utteranc.es/client.js';
 const repo = 'kysung95/kysung95.github.io';
